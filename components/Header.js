@@ -10,16 +10,17 @@ const StyledHeader = styled.header`
 `;
 
 const Logo = styled(Link)`
-    color:#fff;
+    color:#fff; 
     text-decoration: none;
     position: relative;
-    z-index:3;
+    z-index: 10;
 `; 
 
 const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
+    z-index: 10;
 `;
 
 const StyledNav = styled.nav`
@@ -32,10 +33,12 @@ const StyledNav = styled.nav`
     right: 0;
     padding:70px 20px 20px;
     background-color: #222;
+    z-index: 100;
     @media screen and (min-width: 768px){
         display: flex;
         position:static;
         padding:0;
+        z-index: auto;
     }
 `;
 

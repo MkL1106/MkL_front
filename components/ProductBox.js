@@ -30,7 +30,10 @@ const Title = styled(Link)`
     margin: 0;
 `;
 
-const ProductWrapper = styled.div``;
+const ProductWrapper = styled.div`
+    position: relative;
+    z-index: 1;
+`;
 
 const ProductInfoBox = styled.div`
     margin-top: 2px;

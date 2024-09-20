@@ -16,6 +16,7 @@ const HeartButtonStyled = styled.button`
   position: absolute; /* Absolute position */
   top: 7px; /* Adjust this value to position it vertically */
   right: 7px; /* Adjust this value to position it horizontally */
+  z-index: 2;
   svg {
     width: 20px;
     height: 20px;
