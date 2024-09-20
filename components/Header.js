@@ -13,7 +13,7 @@ const Logo = styled(Link)`
     color:#fff; 
     text-decoration: none;
     position: relative;
-    z-index: 10;
+    z-index: 11;
 `; 
 
 const Wrapper = styled.div`
@@ -33,7 +33,7 @@ const StyledNav = styled.nav`
     right: 0;
     padding:70px 20px 20px;
     background-color: #222;
-    z-index: 100;
+    z-index: 10;
     @media screen and (min-width: 768px){
         display: flex;
         position:static;
@@ -60,7 +60,7 @@ const NavButton = styled.button`
     color: white;
     cursor: pointer;
     position: relative;
-    z-index:3;
+    z-index:11;
     @media screen and (min-width: 768px){
         display: none;
     }
