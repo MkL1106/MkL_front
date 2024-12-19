@@ -1,16 +1,18 @@
 import Featured from "@/components/Featured";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import NewProducts from "@/components/NewProducts";
 import { mongooseConnect } from "@/lib/mongoose";
 import { Product } from "@/models/Product";
 import { Settings } from "@/models/Settings";
-
-export default function HomePage({featuredProduct,newProducts}){
+import styled from "styled-components";
+export default function HomePage({ featuredProduct, newProducts }) {
   return (
     <div>
       <Header />
-      <Featured product={featuredProduct}/>
-      <NewProducts products={newProducts}/>
+      <Featured product={featuredProduct} />
+      <NewProducts products={newProducts} />
+      <Footer />
     </div>
   );
 }
@@ -24,9 +26,12 @@ export async function getServerSideProps() {
 
   // Fetch the featured product using the featuredProductId
   const featuredProduct = await Product.findById(featuredProductId);
-  
+
   // Fetch the new products as you did before
-  const newProducts = await Product.find({}, null, { sort: { '_id': -1 }, limit: 10 });
+  const newProducts = await Product.find({}, null, {
+    sort: { _id: -1 },
+    limit: 10,
+  });
 
   return {
     props: {
