@@ -24,7 +24,8 @@ const FooterContent = styled.div`
 
 const FooterSection = styled.div`
   justify-items: top;
-  text-align: start;
+  // text-align: start;
+  align-items : center;
   flex: 1;
 `;
 

@@ -4,6 +4,7 @@ import Center from "./Center";
 import { useContext, useState } from "react";
 import { CartContext } from "./CartContext";
 import BarsIcon from "./icons/Bars";
+import { FaSearch } from "react-icons/fa";
 
 const StyledHeader = styled.header`
     background-color: #222;
@@ -21,6 +22,7 @@ const Wrapper = styled.div`
     justify-content: space-between;
     padding: 20px 0;
     z-index: 10;
+    align-items: center; 
 `;
 
 const StyledNav = styled.nav`
@@ -43,6 +45,16 @@ const StyledNav = styled.nav`
 `;
 
 const NavLink = styled(Link)`
+    display: block;
+    color:#aaa;
+    text-decoration:none;
+    padding: 10px 0;
+    @media screen and (min-width: 768px){
+        padding:0;
+    }
+`;
+
+const SearchLink = styled(Link)`
     display: block;
     color:#aaa;
     text-decoration:none;
@@ -84,6 +96,11 @@ export default function Header(){
             <NavButton onClick={() => setMobileNavActive(prev => !prev)}>
                 <BarsIcon/>
             </NavButton>
+            
+            <SearchLink href={'/search'}>
+            <FaSearch size={20} />
+            </SearchLink>
+          
             </Wrapper> 
          </Center>
         </StyledHeader>

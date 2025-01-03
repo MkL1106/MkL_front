@@ -1,0 +1,6 @@
+{
+   "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+  "editor.suggestSelection": "first",
+  "javascript.validate.enable": true
+}

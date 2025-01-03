@@ -3,5 +3,8 @@
     "paths": {
       "@/*": ["./*"]
     }
-  }
+  },
+  "include": [
+    "**/*",// Make sure you're including .jsx files as well if you use them
+  ],
 }
