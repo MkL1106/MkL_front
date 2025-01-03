@@ -3,10 +3,18 @@ import styled from "styled-components";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const StyledFooter = styled.footer`
-  background-color: #222;
-  color: #fff;
-  padding: 40px 20px;
-  text-align: center;
+   display: none;
+   @media screen and (min-width: 768px) {
+      display: block;
+      background-color: #222;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+   }
 `;
 
 const FooterContent = styled.div`

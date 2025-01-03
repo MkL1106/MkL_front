@@ -10,6 +10,7 @@
     import { useContext, useEffect, useState } from "react";
     import styled from "styled-components";
     import { saveInfo, createInvoice } from "./api/buy";
+import Footer from "@/components/Footer";
 
     export const ColumnsWrapper = styled.div`
         display: grid;
@@ -345,11 +346,12 @@
                                             onChange={ev => setCode(ev.target.value)}
                                         />
                                     </CityHolder>
-                                    <Button $black $block onClick={handleContinue}>Захиалах</Button>
+                                    <Button $black $block onClick={doOrder}>Захиалах</Button>
                             </Box>
                         )}
                     </ColumnsWrapper>
                 </Center>
+              <Footer/>
             </>
         );
     }

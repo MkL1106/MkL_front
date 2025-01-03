@@ -9,6 +9,7 @@ import { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 import ProductsGrid from "@/components/ProductsGrid";
 import WishListProductsGrid from "@/components/WishListProductsGrid";
+import Footer from "@/components/Footer";
 
 export const ColumnsWrapper = styled.div`
     padding-bottom:60px;
@@ -69,6 +70,8 @@ const CityHolder = styled.div`
     gap: 5px;
 `; 
 
+
+
 export default function WishListPage() {
     const { wishListProducts, removeProductFromWishList } = useContext(WishListContext);
     const [products, setProducts] = useState([]);
@@ -108,6 +111,7 @@ export default function WishListPage() {
                         )}
                 </ColumnsWrapper>
             </Center>
+            <Footer />
         </>
     );
 }

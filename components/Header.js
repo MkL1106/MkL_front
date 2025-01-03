@@ -55,12 +55,12 @@ const NavLink = styled(Link)`
 `;
 
 const SearchLink = styled(Link)`
-    display: block;
+    display : none;
+    @media screen and (min-width: 768px){
+        display: block;
     color:#aaa;
     text-decoration:none;
     padding: 10px 0;
-    @media screen and (min-width: 768px){
-        padding:0;
     }
 `;
 
@@ -74,7 +74,8 @@ const NavButton = styled.button`
     position: relative;
     z-index:11;
     @media screen and (min-width: 768px){
-        display: none;
+         display : none;
+
     }
 `;
 
